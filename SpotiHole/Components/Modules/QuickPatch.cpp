@@ -16,17 +16,16 @@ namespace Modules
 {
 	void QuickPatch::ToggleDeveloperTools(bool active)
 	{
-		bool* isDev = (bool*)0x01A14118;
+		bool* isDev = (bool*)0x19E86B0;
 		*isDev = active;
 	}
 
 	void QuickPatch::Branding()
 	{
 		DWORD OldProtection;
-
-		VirtualProtect((LPVOID)0x1291708, sizeof(std::string), PAGE_EXECUTE_READWRITE, &OldProtection);
-		*(std::string*)0x1291708 = (std::string)"SpotiHole";
-		VirtualProtect((LPVOID)0x1291708, sizeof(std::string), OldProtection, &OldProtection);
+		VirtualProtect((LPVOID)0x1274818, sizeof(std::string), PAGE_EXECUTE_READWRITE, &OldProtection);
+		*(std::string*)0x1274818 = (std::string)"SpotiHole";
+		VirtualProtect((LPVOID)0x1274818, sizeof(std::string), OldProtection, &OldProtection);
 	}
 
 	QuickPatch::QuickPatch()

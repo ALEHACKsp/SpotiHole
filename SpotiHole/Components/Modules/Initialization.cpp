@@ -21,7 +21,7 @@ namespace Modules
 
 	bool Initialization::CheckSpotify()
 	{
-		if (Utils::Utils::GetFileSize("Spotify.exe") != 23412456)
+		if (Utils::Utils::GetFileSize("Spotify.exe") != 23233936)
 		{
 			Utils::Utils::DebugPrint("Wrong Spotify version!\nPlease reinstall Spotify with the correct Version");
 			return false;

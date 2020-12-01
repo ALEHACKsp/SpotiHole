@@ -46,13 +46,13 @@ namespace Modules
 		__asm
 		{
 			push    eax
-			push    131FFF0h
-			push    10Eh
-			push    131FFA8h
-			push    128989Ah
+			push	1301920h
+			push	111h
+			push	13018D8h
+			push	126C99Ah
 			push    0
 			push    4
-			push	0CB615Ch
+			push	0C997ECh
 			retn
 		}
 	}
@@ -84,6 +84,6 @@ namespace Modules
 	{
 		Utils::Utils::DebugPrint("Applying AdBlock patch...");
 		Utils::Hook::InstallJmp(Functions::IsSkippable, EnableSkips_hk);
-		Utils::Hook::InstallJmp((void*)0x0CB6143, SetCurrentTrack_stub);
+		Utils::Hook::InstallJmp((void*)0x0C997D3, SetCurrentTrack_stub);
 	}
 }

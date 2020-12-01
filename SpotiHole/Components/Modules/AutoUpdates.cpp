@@ -23,6 +23,6 @@ namespace Modules
 	AutoUpdates::AutoUpdates()
 	{
 		Utils::Utils::DebugPrint("Applying AutoUpdate patch...");
-		Utils::Hook::InstallCall((void*)0xA2CD34, AutoUpdates::ParseUpdateUrl_hk);
+		Utils::Hook::InstallCall((void*)0x9FB90C, AutoUpdates::ParseUpdateUrl_hk);
 	}
 }
